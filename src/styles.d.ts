@@ -1,7 +1,15 @@
 import 'styled-components'
+import { OptionId } from './config/option'
 
 declare module 'styled-components' {
   export interface DefaultTheme {
+    img: {
+      option: {
+        [OptionId.PAPER]: { width: string; height: string; rotate: string }
+        [OptionId.ROCK]: { width: string; height: string; rotate: string }
+        [OptionId.SCISSORS]: { width: string; height: string; rotate: string }
+      }
+    }
     borderRadius: {
       circle: string
       medium: string
@@ -30,9 +38,9 @@ declare module 'styled-components' {
             primary: string
           }
           outer: {
-            red: { shadow: string; primary: string }
-            yellow: { shadow: string; primary: string }
-            blue: { shadow: string; primary: string }
+            [OptionId.ROCK]: { shadow: string; primary: string }
+            [OptionId.SCISSORS]: { shadow: string; primary: string }
+            [OptionId.PAPER]: { shadow: string; primary: string }
           }
         }
       }
