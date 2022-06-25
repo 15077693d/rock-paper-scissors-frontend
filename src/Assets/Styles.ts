@@ -49,7 +49,7 @@ export const defaultTheme: DefaultTheme = {
         normal: '#3B4262',
       },
       option: {
-        hover: 'rbga(255,255,255,0.05)',
+        hover: 'rgba(255,255,255,0.05)',
         inner: {
           shadow: '#BABFD4',
           primary: 'linear-gradient(#F3F3F3, #DADADA);',
