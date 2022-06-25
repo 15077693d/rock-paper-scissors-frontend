@@ -1,7 +1,19 @@
-import { createGlobalStyle, DefaultTheme } from 'styled-components'
+import {
+  createGlobalStyle,
+  DefaultTheme,
+} from 'styled-components'
 import { OptionId } from '../config/option'
 
 export const GlobalStyle = createGlobalStyle`
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
         body{
           margin:0 ;
         padding:0
@@ -34,7 +46,8 @@ export const defaultTheme: DefaultTheme = {
   },
   color: {
     background: {
-      enable: 'radial-gradient(circle, rgba(31,55,87,1) 0%, rgba(19,21,55,1) 100%);',
+      enable:
+        'radial-gradient(circle, rgba(31,55,87,1) 0%, rgba(19,21,55,1) 100%);',
       disable: 'rbga(0,0,0,0.5)',
     },
     grey: '#848C9E',
@@ -52,7 +65,8 @@ export const defaultTheme: DefaultTheme = {
         hover: 'rgba(255,255,255,0.05)',
         inner: {
           shadow: '#BABFD4',
-          primary: 'linear-gradient(#F3F3F3, #DADADA);',
+          primary:
+            'linear-gradient(#F3F3F3, #DADADA);',
         },
         outer: {
           [OptionId.ROCK]: {

@@ -22,26 +22,22 @@ export const Image = styled.img<OptionButtonProps>`
     `
   }}
 `
-export const Wrapper = styled(motion.div)`
-  ${() => {
+export const Wrapper = styled(motion.div)<{
+  disable: boolean
+}>`
+  ${({ disable }) => {
     return css`
       position: relative;
       cursor: pointer;
-      width: 215px;
-      height: 198px;
+      width: ${disable ? '300px' : '215px'};
+      height: ${disable ? '290px' : '198px'};
     `
   }}
 `
-export const InnerContainer = styled.div<{
-  active?: boolean
-}>`
-  ${({
-    theme: { color, borderRadius },
-    active,
-  }) => {
-    const transform = active ? '8%' : '4%'
+export const InnerContainer = styled.div`
+  ${({ theme: { color, borderRadius } }) => {
     return css`
-      transform: translateY(${transform});
+      transform: translateY(4%);
       display: flex;
       justify-content: center;
       align-items: center;

@@ -15,8 +15,6 @@ export default function OptionButton({
   isWinner = false,
 }: OptionButtonProps) {
   const [isHover, setIsHover] = useState(false)
-  const [active, setActive] = useState(false)
-
   const hoveringShadow = <Shadow shadowId='1' />
   const winningShadow = (
     <>
@@ -31,8 +29,9 @@ export default function OptionButton({
 
   return (
     <Wrapper
-      whileHover={{ scale: 1.2 }}
-      whileTap={{ scale: 0.9 }}
+      disable={disable}
+      whileHover={disable ? {} : { scale: 1.2 }}
+      whileTap={disable ? {} : { scale: 0.9 }}
       onMouseEnter={() => {
         if (!disable) {
           setIsHover(true)
@@ -46,8 +45,9 @@ export default function OptionButton({
     >
       {shadow}
       <OuterContainer optionId={optionId}>
-        <InnerContainer active={active}>
+        <InnerContainer>
           <Image
+            className='noselect'
             optionId={optionId}
             src={optionSrc[optionId]}
           />
