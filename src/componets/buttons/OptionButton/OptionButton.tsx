@@ -29,7 +29,7 @@ export default function OptionButton({
 
   return (
     <Wrapper
-      disable={disable}
+      $disable={disable}
       whileHover={disable ? {} : { scale: 1.2 }}
       whileTap={disable ? {} : { scale: 0.9 }}
       onMouseEnter={() => {

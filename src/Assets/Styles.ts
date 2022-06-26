@@ -5,6 +5,7 @@ import {
 import { OptionId } from '../config/option'
 
 export const GlobalStyle = createGlobalStyle`
+font-family: 'Barlow Semi Condensed', sans-serif;
 .noselect {
   -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
@@ -20,6 +21,10 @@ export const GlobalStyle = createGlobalStyle`
         }
 `
 export const defaultTheme: DefaultTheme = {
+  font: {
+    button:
+      '600 16px Barlow Semi Condensed, sans-serif;',
+  },
   img: {
     option: {
       [OptionId.ROCK]: {
@@ -51,16 +56,13 @@ export const defaultTheme: DefaultTheme = {
       disable: 'rbga(0,0,0,0.5)',
     },
     grey: '#848C9E',
-    darkGrey: '#565468v',
+    darkGrey: '#565468',
     white: '#F3F3F3',
     purpleBlue: '#2A45C2',
     darkBlue: '#3B4262',
     black: '#ffffff',
+    red: '#DB2E4D',
     button: {
-      playAgain: {
-        hover: '#DB2E4D',
-        normal: '#3B4262',
-      },
       option: {
         hover: 'rgba(255,255,255,0.05)',
         inner: {

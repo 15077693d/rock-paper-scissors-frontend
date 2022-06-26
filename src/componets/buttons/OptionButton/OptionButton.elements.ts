@@ -23,14 +23,14 @@ export const Image = styled.img<OptionButtonProps>`
   }}
 `
 export const Wrapper = styled(motion.div)<{
-  disable: boolean
+  $disable: boolean
 }>`
-  ${({ disable }) => {
+  ${({ $disable }) => {
     return css`
       position: relative;
       cursor: pointer;
-      width: ${disable ? '300px' : '215px'};
-      height: ${disable ? '290px' : '198px'};
+      width: ${$disable ? '300px' : '215px'};
+      height: ${$disable ? '290px' : '198px'};
     `
   }}
 `

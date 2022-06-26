@@ -3,11 +3,26 @@ import { OptionId } from './config/option'
 
 declare module 'styled-components' {
   export interface DefaultTheme {
+    font: {
+      button: string
+    }
     img: {
       option: {
-        [OptionId.PAPER]: { width: string; height: string; rotate: string }
-        [OptionId.ROCK]: { width: string; height: string; rotate: string }
-        [OptionId.SCISSORS]: { width: string; height: string; rotate: string }
+        [OptionId.PAPER]: {
+          width: string
+          height: string
+          rotate: string
+        }
+        [OptionId.ROCK]: {
+          width: string
+          height: string
+          rotate: string
+        }
+        [OptionId.SCISSORS]: {
+          width: string
+          height: string
+          rotate: string
+        }
       }
     }
     borderRadius: {
@@ -26,11 +41,8 @@ declare module 'styled-components' {
       purpleBlue: string
       darkBlue: string
       black: string
+      red: string
       button: {
-        playAgain: {
-          hover: string
-          normal: string
-        }
         option: {
           hover: string
           inner: {
@@ -38,9 +50,18 @@ declare module 'styled-components' {
             primary: string
           }
           outer: {
-            [OptionId.ROCK]: { shadow: string; primary: string }
-            [OptionId.SCISSORS]: { shadow: string; primary: string }
-            [OptionId.PAPER]: { shadow: string; primary: string }
+            [OptionId.ROCK]: {
+              shadow: string
+              primary: string
+            }
+            [OptionId.SCISSORS]: {
+              shadow: string
+              primary: string
+            }
+            [OptionId.PAPER]: {
+              shadow: string
+              primary: string
+            }
           }
         }
       }
