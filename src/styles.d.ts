@@ -3,6 +3,9 @@ import { OptionId } from './config/option'
 
 declare module 'styled-components' {
   export interface DefaultTheme {
+    device: {
+      mobile: string
+    }
     font: {
       button: string
     }

@@ -25,17 +25,32 @@ export const Image = styled.img<OptionButtonProps>`
 export const Wrapper = styled(motion.div)<{
   $disable: boolean
 }>`
-  ${({ $disable }) => {
+  ${({
+    $disable,
+    theme: {
+      device: { mobile },
+    },
+  }) => {
     return css`
       position: relative;
-      cursor: pointer;
+      cursor: ${$disable ? 'normal' : 'pointer'};
       width: ${$disable ? '300px' : '215px'};
       height: ${$disable ? '290px' : '198px'};
+      @media${mobile} {
+        width: 130px;
+        height: 125px;
+      }
     `
   }}
 `
 export const InnerContainer = styled.div`
-  ${({ theme: { color, borderRadius } }) => {
+  ${({
+    theme: {
+      color,
+      borderRadius,
+      device: { mobile },
+    },
+  }) => {
     return css`
       transform: translateY(4%);
       display: flex;
@@ -47,12 +62,19 @@ export const InnerContainer = styled.div`
       background: ${color.button.option.inner
         .primary};
       box-shadow: ${`0px -10px 0px 0px ${color.button.option.inner.shadow}`};
+      @media${mobile} {
+        box-shadow: ${`0px -6px 0px 0px ${color.button.option.inner.shadow}`};
+      }
     `
   }}
 `
 export const OuterContainer = styled.div<OptionButtonProps>`
   ${({
-    theme: { borderRadius, color },
+    theme: {
+      borderRadius,
+      color,
+      device: { mobile },
+    },
     optionId,
   }) => {
     const { button } = color
@@ -71,6 +93,9 @@ export const OuterContainer = styled.div<OptionButtonProps>`
       width: 100%;
       height: 100%;
       border-radius: ${borderRadius.circle};
+      @media${mobile} {
+        box-shadow: ${`0px 6px 0px 0px ${boxShadowColor}`};
+      }
     `
   }}
 `

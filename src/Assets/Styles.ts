@@ -5,7 +5,6 @@ import {
 import { OptionId } from '../config/option'
 
 export const GlobalStyle = createGlobalStyle`
-font-family: 'Barlow Semi Condensed', sans-serif;
 .noselect {
   -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
@@ -16,11 +15,15 @@ font-family: 'Barlow Semi Condensed', sans-serif;
                                   supported by Chrome, Edge, Opera and Firefox */
 }
         body{
+font-family: 'Barlow Semi Condensed', sans-serif;
           margin:0 ;
         padding:0
         }
 `
 export const defaultTheme: DefaultTheme = {
+  device: {
+    mobile: '(max-width: 500px)',
+  },
   font: {
     button:
       '600 16px Barlow Semi Condensed, sans-serif;',
@@ -53,7 +56,7 @@ export const defaultTheme: DefaultTheme = {
     background: {
       enable:
         'radial-gradient(circle, rgba(31,55,87,1) 0%, rgba(19,21,55,1) 100%);',
-      disable: 'rbga(0,0,0,0.5)',
+      disable: 'rgba(0,0,0,0.5)',
     },
     grey: '#848C9E',
     darkGrey: '#565468',

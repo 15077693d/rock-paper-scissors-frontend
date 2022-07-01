@@ -26,7 +26,7 @@ export const Button = styled(
     const hoveredColor =
       varient === 'outlined' ? darkBlue : red
     return css`
-      transition: color, background-color 0.6s;
+      transition: color, background-color 0.4s;
       background: ${initBackground};
       cursor: pointer;
       border: 1.5px solid ${white};

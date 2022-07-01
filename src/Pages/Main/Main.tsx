@@ -1,19 +1,15 @@
-import BaseButton from '../../componets/buttons/BaseButton/BaseButton'
-import OptionButton from '../../componets/buttons/OptionButton/OptionButton'
-import { OptionId } from '../../config/option'
+import RuleCard from '../../componets/cards/RuleCard/RuleCard'
 import { Container } from './Main.elements'
 
 export default function Main() {
   return (
     <Container>
-      {/* <OptionButton
-        optionId={OptionId.SCISSORS}
-        disable
-        isWinner
-      /> */}
+      <RuleCard />
+      {/* <FeeCard />
       <OptionButton
         optionId={OptionId.ROCK}
-        disable={true}
+        disable
+        isWinner
       />
       <OptionButton optionId={OptionId.PAPER} />
       <BaseButton
@@ -29,7 +25,7 @@ export default function Main() {
         height={'40px'}
       >
         rules
-      </BaseButton>
+      </BaseButton> */}
     </Container>
   )
 }
