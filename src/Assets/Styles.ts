@@ -20,9 +20,10 @@ font-family: 'Barlow Semi Condensed', sans-serif;
         padding:0
         }
 `
+export const mobileValue = 500
 export const defaultTheme: DefaultTheme = {
   device: {
-    mobile: '(max-width: 500px)',
+    mobile: `(max-width: ${mobileValue}px)`,
   },
   font: {
     button:

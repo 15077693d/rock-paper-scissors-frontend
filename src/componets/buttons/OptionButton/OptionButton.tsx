@@ -13,6 +13,7 @@ export default function OptionButton({
   optionId,
   disable = false,
   isWinner = false,
+  ...args
 }: OptionButtonProps) {
   const [isHover, setIsHover] = useState(false)
   const hoveringShadow = <Shadow shadowId='1' />
@@ -29,6 +30,7 @@ export default function OptionButton({
 
   return (
     <Wrapper
+      {...args}
       $disable={disable}
       whileHover={disable ? {} : { scale: 1.2 }}
       whileTap={disable ? {} : { scale: 0.9 }}

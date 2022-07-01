@@ -9,11 +9,13 @@ export default function BaseButton({
   varient = 'contained',
   width,
   height,
+  ...args
 }: {
   children: ReactNode
 } & ButtonProps) {
   return (
     <Button
+      {...args}
       varient={varient}
       width={width}
       height={height}
