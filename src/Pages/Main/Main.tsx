@@ -1,4 +1,4 @@
-import SelectOptionsContainer from '../../containers/SelectOptionsContainer/SelectOptionsContainer'
+import RevealOptionContainer from '../../containers/RevealOptionContainer/RevealOptionContainer'
 import { Container } from './Main.elements'
 
 export default function Main() {
@@ -20,7 +20,8 @@ export default function Main() {
         play again
       </BaseButton>
       <RulesButton /> */}
-      <SelectOptionsContainer />
+      {/* <SelectOptionsContainer /> */}
+      <RevealOptionContainer />
     </Container>
   )
 }

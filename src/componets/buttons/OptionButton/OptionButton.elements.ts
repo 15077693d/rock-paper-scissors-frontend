@@ -4,7 +4,7 @@ import { OptionId } from '../../../config/option'
 
 export type OptionButtonProps = {
   optionId: OptionId
-  disable?: boolean
+  disabled?: boolean
   isWinner?: boolean
 }
 export const Image = styled.img<OptionButtonProps>`
@@ -23,19 +23,19 @@ export const Image = styled.img<OptionButtonProps>`
   }}
 `
 export const Wrapper = styled(motion.div)<{
-  $disable: boolean
+  $disabled: boolean
 }>`
   ${({
-    $disable,
+    $disabled,
     theme: {
       device: { mobile },
     },
   }) => {
     return css`
       position: relative;
-      cursor: ${$disable ? 'normal' : 'pointer'};
-      width: ${$disable ? '300px' : '215px'};
-      height: ${$disable ? '290px' : '198px'};
+      cursor: ${$disabled ? 'normal' : 'pointer'};
+      width: ${$disabled ? '300px' : '215px'};
+      height: ${$disabled ? '290px' : '198px'};
       @media${mobile} {
         width: 130px;
         height: 125px;

@@ -11,7 +11,7 @@ import {
 
 export default function OptionButton({
   optionId,
-  disable = false,
+  disabled = false,
   isWinner = false,
   ...args
 }: OptionButtonProps) {
@@ -25,22 +25,22 @@ export default function OptionButton({
     </>
   )
   const shadow =
-    (!disable && isHover && hoveringShadow) ||
+    (!disabled && isHover && hoveringShadow) ||
     (isWinner && winningShadow)
 
   return (
     <Wrapper
       {...args}
-      $disable={disable}
-      whileHover={disable ? {} : { scale: 1.2 }}
-      whileTap={disable ? {} : { scale: 0.9 }}
+      $disabled={disabled}
+      whileHover={disabled ? {} : { scale: 1.2 }}
+      whileTap={disabled ? {} : { scale: 0.9 }}
       onMouseEnter={() => {
-        if (!disable) {
+        if (!disabled) {
           setIsHover(true)
         }
       }}
       onMouseLeave={() => {
-        if (!disable) {
+        if (!disabled) {
           setIsHover(false)
         }
       }}
