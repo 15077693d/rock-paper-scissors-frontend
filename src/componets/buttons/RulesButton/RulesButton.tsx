@@ -4,11 +4,17 @@ import { BaseRulesButton } from './RulesButton.elements'
 
 export const RulesButton = () => {
   const [active, setActive] = useState(false)
-
   return (
     <>
-      <RuleCard />
+      {active && (
+        <RuleCard
+          handleClickCross={() =>
+            setActive(false)
+          }
+        />
+      )}
       <BaseRulesButton
+        onClick={() => setActive(true)}
         varient={'outlined'}
         width={'128px'}
         height={'40px'}

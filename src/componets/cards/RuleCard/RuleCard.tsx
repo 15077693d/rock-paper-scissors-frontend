@@ -12,11 +12,15 @@ import {
   Wrapper,
 } from './RuleCard.elements'
 
-export default function RuleCard() {
+export default function RuleCard({
+  handleClickCross,
+}: {
+  handleClickCross: () => void
+}) {
   const isMoblie = useIsMoblie()
-
   const crossBtn = (
     <Cross
+      onClick={handleClickCross}
       src={crossSrc}
       whileHover={{ scale: 1.2 }}
       whileTap={{ scale: 0.9 }}

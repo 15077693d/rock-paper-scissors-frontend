@@ -5,6 +5,7 @@ export type ButtonProps = {
   varient: 'contained' | 'outlined'
   width: string
   height: string
+  onClick?: () => void
 }
 export const Button = styled(
   motion.button,
