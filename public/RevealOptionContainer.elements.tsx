@@ -47,9 +47,20 @@ export const OptionsWrapper = styled.div`
 `
 
 export const OptionWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  ${({
+    theme: {
+      device: { mobile },
+    },
+  }) => {
+    return css`
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      @media ${mobile} {
+        flex-direction: column-reverse;
+      }
+    `
+  }}
 `
 
 export const Title = styled.span`
@@ -69,6 +80,8 @@ export const Title = styled.span`
       @media ${mobile} {
         font-size: 15px;
         letter-spacing: 1.88px;
+        margin-top: 30px;
+        margin-bottom: 0;
       }
     `
   }}

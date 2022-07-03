@@ -1,12 +1,14 @@
 import { ThemeProvider } from 'styled-components'
-import { defaultTheme, GlobalStyle } from './assets/styles'
-import Main from './pages/Main/Main'
-
+import {
+  defaultTheme,
+  GlobalStyle,
+} from './assets/styles'
+import AppRoutes from './config/routes'
 function App() {
   return (
     <ThemeProvider theme={defaultTheme}>
       <GlobalStyle />
-      <Main />
+      <AppRoutes />
     </ThemeProvider>
   )
 }
