@@ -6,7 +6,7 @@ export const Container = styled(motion.div)`
     return css`
       display: flex;
       justify-content: center;
-      margin-top: 120px;
+      margin-top: 60px;
     `
   }}
 `
