@@ -15,8 +15,12 @@ import {
 
 export default function OptionsContainer({
   isResult,
+  handleClickReveal,
+  handleClickPlayAgain,
 }: {
   isResult: boolean
+  handleClickReveal?: () => void
+  handleClickPlayAgain?: () => void
 }) {
   const isMoblie = useIsMoblie()
   return (
@@ -32,7 +36,9 @@ export default function OptionsContainer({
         {!isMoblie && isResult && (
           <ResultWrapper>
             <Result>YOU WIN</Result>
-            <PlayAgainButton />
+            <PlayAgainButton
+              onClick={handleClickPlayAgain}
+            />
           </ResultWrapper>
         )}
         <OptionWrapper>
@@ -40,11 +46,17 @@ export default function OptionsContainer({
           <EmptyOption />
         </OptionWrapper>
       </OptionsWrapper>
-      {!isResult && <RevealButton />}
+      {!isResult && (
+        <RevealButton
+          onClick={handleClickReveal}
+        />
+      )}
       {isResult && isMoblie && (
         <ResultWrapper>
           <Result>YOU WIN</Result>
-          <PlayAgainButton />
+          <PlayAgainButton
+            onClick={handleClickPlayAgain}
+          />
         </ResultWrapper>
       )}
     </Container>

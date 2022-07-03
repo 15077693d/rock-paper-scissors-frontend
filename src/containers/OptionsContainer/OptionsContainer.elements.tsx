@@ -131,9 +131,14 @@ export const BaseRevealButton = styled(
   }}
 `
 
-export const RevealButton = () => {
+export const RevealButton = ({
+  onClick,
+}: {
+  onClick?: () => void
+}) => {
   return (
     <BaseRevealButton
+      onClick={onClick}
       varient={'contained'}
       width={'220px'}
       height={'48px'}
@@ -153,9 +158,14 @@ export const BasePlayAgainButton = styled(
   }}
 `
 
-export const PlayAgainButton = () => {
+export const PlayAgainButton = ({
+  onClick,
+}: {
+  onClick?: () => void
+}) => {
   return (
     <BasePlayAgainButton
+      onClick={onClick}
       varient={'contained'}
       width={'220px'}
       height={'48px'}

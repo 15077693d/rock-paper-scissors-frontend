@@ -28,7 +28,7 @@ export default function RuleCard({
   )
   return (
     <Wrapper>
-      <Background />
+      <Background onClick={handleClickCross} />
       <Container>
         <Header>
           <span>RULES</span>
