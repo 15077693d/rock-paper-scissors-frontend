@@ -8,6 +8,7 @@ export const Background = styled.div`
     },
   }) => {
     return css`
+      z-index: 3;
       position: absolute;
       background-color: ${background.disable};
       width: 100vw;
@@ -27,6 +28,7 @@ export const Container = styled.div`
     },
   }) => {
     return css`
+      z-index: 3;
       position: relative;
       background-color: ${color.white};
       width: 400px;

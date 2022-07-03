@@ -26,7 +26,6 @@ export default function OptionsContainer({
           <Title>YOU PICKED</Title>
           <OptionButton
             disabled
-            isWinner
             optionId={OptionId.PAPER}
           />
         </OptionWrapper>

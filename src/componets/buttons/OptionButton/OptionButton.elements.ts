@@ -6,6 +6,7 @@ export type OptionButtonProps = {
   optionId: OptionId
   disabled?: boolean
   isWinner?: boolean
+  onClick?: () => void
 }
 export const Image = styled.img<OptionButtonProps>`
   ${({
