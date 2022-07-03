@@ -1,4 +1,4 @@
-import { RulesButton } from '../../../pages/OptionSelectPage/OptionSelectPage.elements'
+import { RulesButton } from '../../../componets/buttons/RulesButton/RulesButton'
 import LogoFeeCardContainer from '../../LogoFeeCardContainer/LogoFeeCardContainer'
 import {
   ChildrenContainer,

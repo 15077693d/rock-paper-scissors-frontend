@@ -2,17 +2,8 @@ import styled, { css } from 'styled-components'
 import ConnectFacuetButtonsContainer from '../../ConnectFacuetButtonsContainer/ConnectFacuetButtonsContainer'
 
 export const Container = styled.div`
-  ${({
-    theme: {
-      color: {
-        background: { enable },
-      },
-    },
-  }) => {
+  ${() => {
     return css`
-      background: ${enable};
-      width: 100vw;
-      height: 100vh;
       flex-direction: column;
       display: flex;
       align-items: center;
@@ -48,7 +39,7 @@ export const StyledConnectFacuetButtonsContainer = styled(
       margin-left: 15px;
       @media ${mobile} {
         margin-left: 0px;
-        margin-bottom: 15px;
+        margin-top: 15px;
       }
     `
   }}

@@ -85,6 +85,7 @@ export const Image = styled.img`
 export const Wrapper = styled.div`
   ${() => {
     return css`
+      position: absolute;
       width: 100vw;
       height: 100vh;
       display: flex;
