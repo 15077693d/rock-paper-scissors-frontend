@@ -26,8 +26,15 @@ export default function RuleCard({
       whileTap={{ scale: 0.9 }}
     />
   )
+
   return (
-    <Wrapper>
+    <Wrapper
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{
+        opacity: 0,
+      }}
+    >
       <Background onClick={handleClickCross} />
       <Container>
         <Header>

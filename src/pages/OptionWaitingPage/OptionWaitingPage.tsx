@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router-dom'
+import { pageVariants } from '../../assets/animationVariants'
 import {
   RouteId,
   routes,
@@ -11,7 +12,12 @@ export default function OptionWaitingPage() {
   const handleClickReveal = () =>
     navigate(routes[RouteId.RESULT].path)
   return (
-    <Container>
+    <Container
+      variants={pageVariants}
+      initial={'initial'}
+      animate={'animate'}
+      exit={'exit'}
+    >
       <OptionsContainer
         isResult={false}
         handleClickReveal={handleClickReveal}

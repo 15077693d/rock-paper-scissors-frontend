@@ -1,7 +1,8 @@
+import { AnimatePresence } from 'framer-motion'
 import {
-  BrowserRouter,
   Route,
   Routes,
+  useLocation,
 } from 'react-router-dom'
 import MainLayout from '../../containers/Layout/MainLayout/MainLayout'
 import OptionSelectPage from '../../pages/OptionSelectPage/OptionSelectPage'
@@ -33,19 +34,27 @@ export const routes: {
 }
 
 export default function AppRoutes() {
+  const location = useLocation()
   return (
-    <BrowserRouter>
+    <AnimatePresence>
       <MainLayout>
-        <Routes>
-          {Object.values(routes).map((route) => (
-            <Route
-              key={route.path}
-              path={route.path}
-              element={route.Component}
-            />
-          ))}
-        </Routes>
+        <AnimatePresence exitBeforeEnter>
+          <Routes
+            location={location}
+            key={location.pathname}
+          >
+            {Object.values(routes).map(
+              (route) => (
+                <Route
+                  key={route.path}
+                  path={route.path}
+                  element={route.Component}
+                />
+              ),
+            )}
+          </Routes>
+        </AnimatePresence>
       </MainLayout>
-    </BrowserRouter>
+    </AnimatePresence>
   )
 }

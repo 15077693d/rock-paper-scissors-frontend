@@ -1,3 +1,4 @@
+import { AnimatePresence } from 'framer-motion'
 import { useState } from 'react'
 import RuleCard from '../../cards/RuleCard/RuleCard'
 import { BaseRulesButton } from './RulesButton.elements'
@@ -6,13 +7,15 @@ export const RulesButton = () => {
   const [active, setActive] = useState(false)
   return (
     <>
-      {active && (
-        <RuleCard
-          handleClickCross={() =>
-            setActive(false)
-          }
-        />
-      )}
+      <AnimatePresence>
+        {active && (
+          <RuleCard
+            handleClickCross={() =>
+              setActive(false)
+            }
+          />
+        )}
+      </AnimatePresence>
       <BaseRulesButton
         onClick={() => setActive(true)}
         varient={'outlined'}

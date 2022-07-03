@@ -5,6 +5,11 @@ type useIsMoblieReturnType = boolean
 export default function useIsMoblie(): useIsMoblieReturnType {
   const [isMoblie, setIsMoblie] = useState(false)
   useEffect(() => {
+    if (window.innerWidth > mobileValue) {
+      setIsMoblie(false)
+    } else {
+      setIsMoblie(true)
+    }
     const handleResize = () => {
       if (window.innerWidth > mobileValue) {
         setIsMoblie(false)

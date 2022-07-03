@@ -23,6 +23,7 @@ ${({ theme: { color } }) => {
       background: ${color.background.enable};
       font-family: 'Barlow Semi Condensed',
         sans-serif;
+      overflow: hidden;
       margin: 0;
       padding: 0;
     }
