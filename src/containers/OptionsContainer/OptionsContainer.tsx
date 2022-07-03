@@ -1,5 +1,5 @@
 import OptionButton from '../../componets/buttons/OptionButton/OptionButton'
-import { OptionId } from '../../config/option'
+import { useGameDataContext } from '../../contexts/useGameDataContext'
 import useIsMoblie from '../../hooks/useIsMoblie'
 import {
   Container,
@@ -23,6 +23,8 @@ export default function OptionsContainer({
   handleClickPlayAgain?: () => void
 }) {
   const isMoblie = useIsMoblie()
+  const { myOptionId } = useGameDataContext()
+  if (!myOptionId) return <></>
   return (
     <Container>
       <OptionsWrapper isResult={isResult}>
@@ -30,7 +32,7 @@ export default function OptionsContainer({
           <Title>YOU PICKED</Title>
           <OptionButton
             disabled
-            optionId={OptionId.PAPER}
+            optionId={myOptionId}
           />
         </OptionWrapper>
         {!isMoblie && isResult && (

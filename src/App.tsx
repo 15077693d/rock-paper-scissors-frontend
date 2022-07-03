@@ -5,15 +5,18 @@ import {
   GlobalStyle,
 } from './assets/styles'
 import AppRoutes from './config/routes'
+import { GameDataContextProvider } from './contexts/useGameDataContext'
 
 function App() {
   return (
-    <BrowserRouter>
-      <ThemeProvider theme={defaultTheme}>
-        <GlobalStyle />
-        <AppRoutes />
-      </ThemeProvider>
-    </BrowserRouter>
+    <GameDataContextProvider>
+      <BrowserRouter>
+        <ThemeProvider theme={defaultTheme}>
+          <GlobalStyle />
+          <AppRoutes />
+        </ThemeProvider>
+      </BrowserRouter>
+    </GameDataContextProvider>
   )
 }
 
