@@ -4,7 +4,7 @@ import {
   RouteId,
   routes,
 } from '../../config/routes'
-import OptionsContainer from '../../containers/OptionsContainer/OptionsContainer'
+import ResultContainer from '../../containers/ResultContainer/ResultContainer'
 import { Container } from './ResultPage.elements'
 
 export default function ResultPage() {
@@ -14,12 +14,9 @@ export default function ResultPage() {
   return (
     <Container
       variants={pageVariants}
-      initial={'initial'}
-      animate={'animate'}
       exit={'exit'}
     >
-      <OptionsContainer
-        isResult={true}
+      <ResultContainer
         handleClickPlayAgain={
           handleClickPlayAgain
         }

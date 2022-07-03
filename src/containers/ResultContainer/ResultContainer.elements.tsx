@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion'
 import styled, { css } from 'styled-components'
 import BaseButton from '../../componets/buttons/BaseButton/BaseButton'
 
@@ -32,14 +33,17 @@ export const Container = styled.div`
     z-index: 1;
   }
 `
-export const OptionsWrapper = styled.div`
+export const OptionsWrapper = styled(motion.div)<{
+  isResult: boolean
+}>`
   ${({
+    isResult,
     theme: {
       device: { mobile },
     },
   }) => {
     return css`
-      width: 700px;
+      width: 938px;
       display: flex;
       justify-content: space-between;
       @media ${mobile} {
@@ -49,7 +53,7 @@ export const OptionsWrapper = styled.div`
   }}
 `
 
-export const OptionWrapper = styled.div`
+export const OptionWrapper = styled(motion.div)`
   ${({
     theme: {
       device: { mobile },
@@ -77,7 +81,7 @@ export const Result = styled.span`
   }}
 `
 
-export const ResultWrapper = styled.div`
+export const ResultWrapper = styled(motion.div)`
   ${({
     theme: {
       device: { mobile },

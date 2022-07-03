@@ -16,10 +16,8 @@ export default function OptionWaitingPage() {
       variants={pageVariants}
       initial={'initial'}
       animate={'animate'}
-      exit={'exit'}
     >
       <OptionsContainer
-        isResult={false}
         handleClickReveal={handleClickReveal}
       />
     </Container>
