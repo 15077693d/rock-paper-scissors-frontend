@@ -11,15 +11,6 @@ import {
   Title,
 } from './ResultContainer.elements'
 
-const optionWrapperVariant = {
-  initial: {
-    x: 100,
-  },
-  animate: {
-    transition: { duration: 0.5 },
-    x: 0,
-  },
-}
 export default function ResultContainer({
   handleClickPlayAgain,
 }: {
