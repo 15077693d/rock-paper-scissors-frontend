@@ -37,7 +37,6 @@ export const OptionsWrapper = styled(motion.div)<{
   isResult: boolean
 }>`
   ${({
-    isResult,
     theme: {
       device: { mobile },
     },
